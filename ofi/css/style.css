@@ -1,2 +1,1 @@
-h1 {
-  background: red; }
+h1{background:#ff0}h2{background:red}@media screen and (min-width:768px){h1{background:orange}h2{background:pink}}

@@ -46,9 +46,7 @@
 
 	var $ = __webpack_require__(1);
 
-	(function() {
-	  $(".page__title").css({"color": "black"});
-	})();
+
 
 
 /***/ },
