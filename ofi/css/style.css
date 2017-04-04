@@ -1,1 +1,87 @@
-html{font-size:62.5%}body{font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue","Noto Sans Japanese","ヒラギノ角ゴ ProN W3",Hiragino Kaku Gothic ProN,Arial,Meiryo,sans-serif;font-weight:100;color:#333}.page__carousel{position:relative;height:72px;overflow:hidden}.page__contents{display:flex;justify-content:center}.carouselList{display:flex;list-style-type:none}.carouselList__link{display:block;width:72px;height:72px;background-repeat:no-repeat;background-size:cover;background-position:center top}.contents{max-width:600px;padding:40px 20px;display:flex;flex-direction:column;align-items:center}.contents__name{margin-bottom:12px;font-size:1.2rem;font-weight:100;letter-spacing:.6rem;color:#555}.contents__mainLogo{margin-bottom:12px;width:100%;font-family:"ヒラギノ明朝 ProN",serif;font-weight:300}.contents__logoBlock{margin-bottom:8px;display:flex;justify-content:space-around}.contents__logoChar,.contents__title{display:block;line-height:1}.contents__logoChar{font-size:8rem}.contents__title{font-size:1.2rem;text-align:center;letter-spacing:1rem}.contents__description{font-size:1rem}@media screen and (min-width:768px){.page__carousel{height:100px}.carouselList__link{width:100px;height:100px}.contents{padding:40px 0}.contents__name{font-size:1.8rem;letter-spacing:1.56rem}.contents__logoBlock{justify-content:space-between}.contents__logoChar{font-size:14rem}.contents__title{font-size:1.6rem}.contents__description{font-size:1.4rem}}
+@charset "UTF-8";
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, Meiryo, sans-serif;
+  font-weight: 100;
+  color: #333; }
+
+.page__carousel {
+  position: relative;
+  height: 72px;
+  overflow: hidden; }
+  @media screen and (min-width: 768px) {
+    .page__carousel {
+      height: 100px; } }
+
+.page__contents {
+  display: flex;
+  justify-content: center; }
+
+.carouselList {
+  display: flex;
+  list-style-type: none; }
+  .carouselList__link {
+    display: block;
+    width: 72px;
+    height: 72px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top; }
+    @media screen and (min-width: 768px) {
+      .carouselList__link {
+        width: 100px;
+        height: 100px; } }
+
+.contents {
+  max-width: 600px;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  @media screen and (min-width: 768px) {
+    .contents {
+      padding: 40px 0; } }
+  .contents__name {
+    margin-bottom: 12px;
+    font-size: 1.2rem;
+    font-weight: 100;
+    letter-spacing: .6rem;
+    color: #555; }
+    @media screen and (min-width: 768px) {
+      .contents__name {
+        font-size: 1.8rem;
+        letter-spacing: 1.56rem; } }
+  .contents__mainLogo {
+    margin-bottom: 12px;
+    width: 100%;
+    font-family: "ヒラギノ明朝 ProN", serif;
+    font-weight: 300; }
+  .contents__logoBlock {
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-around; }
+    @media screen and (min-width: 768px) {
+      .contents__logoBlock {
+        justify-content: space-between; } }
+  .contents__logoChar, .contents__title {
+    display: block;
+    line-height: 1; }
+  .contents__logoChar {
+    font-size: 8rem; }
+    @media screen and (min-width: 768px) {
+      .contents__logoChar {
+        font-size: 14rem; } }
+  .contents__title {
+    font-size: 1.2rem;
+    text-align: center;
+    letter-spacing: 1rem; }
+    @media screen and (min-width: 768px) {
+      .contents__title {
+        font-size: 1.6rem; } }
+  .contents__description {
+    font-size: 1rem; }
+    @media screen and (min-width: 768px) {
+      .contents__description {
+        font-size: 1.4rem; } }
