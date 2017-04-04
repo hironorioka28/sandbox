@@ -1,0 +1,10 @@
+$bplist: (
+  "tablet": "screen and (min-width: 768px)",
+  "pc": "screen and (min-width: 1048px)"
+);
+
+@mixin mq($bp: tablet) {
+  @media #{map-get($bplist, $bp)} {
+    @content;
+  }
+}

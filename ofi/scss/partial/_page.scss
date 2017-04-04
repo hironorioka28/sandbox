@@ -1,0 +1,14 @@
+.page {
+  &__carousel {
+    position: relative;
+    height: 72px;
+    overflow: hidden;
+    @include mq() {
+      height: 100px;
+    }
+  }
+  &__contents {
+    display: flex;
+    justify-content: center;
+  }
+}
