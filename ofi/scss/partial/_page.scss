@@ -10,5 +10,19 @@
   &__contents {
     display: flex;
     justify-content: center;
+    background-color: $white-l;
+    position: relative;
+  }
+  &__video {
+    width: 100%;
+    height: calc(100vh - 72px - 292px);
+    overflow: hidden;
+    @include mq() {
+      height: calc(100vh - 100px - 376px);
+    }
+  }
+  &__svg {
+    position: absolute;
+    top: 0;
   }
 }
