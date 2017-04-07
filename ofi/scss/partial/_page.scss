@@ -15,14 +15,14 @@
   }
   &__video {
     width: 100%;
-    height: calc(100vh - 72px - 292px);
+    height: calc(100vh - 72px - 300px);
     overflow: hidden;
     @include mq() {
-      height: calc(100vh - 100px - 376px);
+      height: calc(100vh - 100px - 384px);
     }
   }
   &__svg {
     position: absolute;
-    top: 0;
+    top: -1px;
   }
 }

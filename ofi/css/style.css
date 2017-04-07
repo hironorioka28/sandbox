@@ -23,15 +23,15 @@ body {
 
 .page__video {
   width: 100%;
-  height: calc(100vh - 72px - 292px);
+  height: calc(100vh - 72px - 300px);
   overflow: hidden; }
   @media screen and (min-width: 768px) {
     .page__video {
-      height: calc(100vh - 100px - 376px); } }
+      height: calc(100vh - 100px - 384px); } }
 
 .page__svg {
   position: absolute;
-  top: 0; }
+  top: -1px; }
 
 .carouselList {
   display: flex;
@@ -50,14 +50,14 @@ body {
 
 .contents {
   max-width: 600px;
-  padding: 40px 20px 0;
+  padding: 40px 20px 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative; }
   @media screen and (min-width: 768px) {
     .contents {
-      padding: 40px 0 0; } }
+      padding: 40px 0 8px; } }
   .contents__name {
     margin-bottom: 12px;
     font-size: 1.2rem;
