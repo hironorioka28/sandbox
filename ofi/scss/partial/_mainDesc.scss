@@ -1,0 +1,25 @@
+.mainDesc {
+  &__title,
+  &__text {
+    color: $ofi_yellow;
+  }
+  &__title {
+    margin-bottom: 12px;
+    line-height: 1;
+    font: {
+      size: 1.6rem;
+      weight: 200;
+    }
+  }
+  &__text {
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    &--emphasis {
+      font-size: 1.6rem;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

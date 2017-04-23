@@ -4,8 +4,12 @@ html {
 
 body {
   font: {
-    family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Arial, Meiryo, sans-serif;
+    family: Garamond, "Hiragino Mincho ProN", Meiryo, serif;
     weight: 200;
   }
   color: $black-m;
+}
+
+a {
+  text-decoration: none;
 }

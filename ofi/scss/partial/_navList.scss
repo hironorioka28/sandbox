@@ -1,0 +1,10 @@
+.navList {
+  list-style: none;
+  display: flex;
+  &__item {
+    margin-right: 40px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

@@ -1,5 +1,4 @@
 .contents {
-  max-width: 600px;
   padding: 40px 20px 8px;
   display: flex;
   flex-direction: column;
@@ -7,6 +6,7 @@
   position: relative;
   @include mq() {
     padding: 40px 0 8px;
+    width: 600px;
   }
   &__name {
     margin-bottom: 12px;
@@ -14,27 +14,46 @@
       size: 1.2rem;
       weight: 200;
     }
-    letter-spacing: .6rem;
-    color: $black-l;
+    letter-spacing: .8rem;
+    color: $ofi_yellow;
+    text-align: center;
     @include mq() {
+      margin-bottom: 20px;
       font-size: 1.8rem;
       letter-spacing: 1.56rem;
     }
   }
   &__mainLogo {
-    margin-bottom: 12px;
-    width: 100%;
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     font: {
-      family: "ヒラギノ明朝 ProN", serif;
       weight: 300;
+    }
+    color: $ofi_yellow;
+    @include mq() {
+      margin-bottom: 40px;
     }
   }
   &__logoBlock {
     margin-bottom: 8px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    width: 300px;
+    background: {
+      image: url(../img/texture.jpg);
+      size: cover;
+      repeat: no-repeat;
+      position: center bottom;
+    }
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
     @include mq() {
-      justify-content: space-between;
+      width: 532px;
+      margin-bottom: 20px;
     }
   }
   &__logoChar,
@@ -54,34 +73,44 @@
     letter-spacing: 1rem;
     @include mq() {
       font-size: 1.6rem;
+    letter-spacing: 2rem;
     }
   }
-  &__description {
-    margin-bottom: 40px;
-    font-size: 1rem;
+  &__info {
+    margin-bottom: 60px;
+    font-style: normal;
+  }
+  &__text {
+    margin-bottom: 4px;
+    color: $ofi_yellow;
+    text-align: center;
+    &:last-child {
+      margin-bottom: 0;
+    }
     @include mq() {
-      font-size: 1.4rem;
+      display: flex;
+      justify-content: center;
+      font-size: 1.2rem;
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
-  &__button {
-    display: flex;
-    align-items: center;
-    font: {
-      size: 1.2rem;
-      weight: 600;
+  &__textBlock {
+    margin-bottom: 2px;
+    display: block;
+    &:last-child {
+      margin-bottom: 0;
     }
-    font-variant-ligatures: no-common-ligatures;
-    letter-spacing: .8rem;
     @include mq() {
-      font-size: 1.8rem;
-    letter-spacing: 1.2rem;
+      margin: 0 20px 0 0;
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
-  &__buttonImg {
-    margin: 0 8px;
-    width: 40px;
-    @include mq() {
-      width: 60px;
-    }
+  &__descWrapper {
+    margin-bottom: 20px;
+    width: 100%;
   }
 }

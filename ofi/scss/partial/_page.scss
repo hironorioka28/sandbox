@@ -1,28 +1,12 @@
 .page {
-  &__carousel {
-    position: relative;
-    height: 72px;
-    overflow: hidden;
-    @include mq() {
-      height: 100px;
-    }
+  background: {
+    image: url(../img/bg.png);
+    size: cover;
+    position: center top;
   }
   &__contents {
     display: flex;
     justify-content: center;
-    background-color: $white-l;
     position: relative;
-  }
-  &__video {
-    width: 100%;
-    height: calc(100vh - 72px - 300px);
-    overflow: hidden;
-    @include mq() {
-      height: calc(100vh - 100px - 384px);
-    }
-  }
-  &__svg {
-    position: absolute;
-    top: -1px;
   }
 }

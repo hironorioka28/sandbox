@@ -1,0 +1,22 @@
+.navButton {
+  display: block;
+  outline: none;
+  &--disabled {
+    opacity: .6;
+    pointer-events: none;
+  }
+  &__text {
+    color: $ofi_yellow;
+    font-size: 1.2rem;
+    @include mq() {
+      font-size: 1.8rem;
+    }
+  }
+  &__svg {
+    width: 32px;
+    margin: 0 auto;
+    @include mq() {
+      width: 48px;
+    }
+  }
+}
