@@ -1,0 +1,19 @@
+.about {
+  width: 100%;
+  padding: 20px 12px;
+  color: $white-l;
+  @include mq() {
+    width: 80%;
+  }
+  @include mq(pc) {
+    width: 1024px;
+  }
+  &__title {
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+    letter-spacing: .5rem;
+    @include mq() {
+      font-size: 1.8rem;
+    }
+  }
+}

@@ -10,6 +10,9 @@
       size: 1.6rem;
       weight: 200;
     }
+    @include mq() {
+      margin-bottom: 20px;
+    }
   }
   &__text {
     margin-bottom: 8px;

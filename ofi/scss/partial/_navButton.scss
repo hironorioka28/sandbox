@@ -1,8 +1,10 @@
 .navButton {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   outline: none;
   &--disabled {
-    opacity: .6;
+    opacity: .4;
     pointer-events: none;
   }
   &__text {
@@ -14,7 +16,6 @@
   }
   &__svg {
     width: 32px;
-    margin: 0 auto;
     @include mq() {
       width: 48px;
     }

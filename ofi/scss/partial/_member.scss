@@ -1,0 +1,36 @@
+.member {
+  @include mq(pc) {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item {
+    margin-bottom: 40px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    @include mq(pc) {
+      width: 320px;
+      flex-shrink: 0;
+    }
+  }
+  &__name {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    font: {
+      size: 1.4rem;
+      weight: 200;
+    }
+    @include mq() {
+      font-size: 1.6rem;
+    }
+  }
+  &__profile {
+    margin-bottom: 12px;
+  }
+  &__link {
+    margin-left: 8px;
+    display: block;
+    width: 20px;
+  }
+}
