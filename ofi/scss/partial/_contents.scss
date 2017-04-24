@@ -49,7 +49,8 @@
     }
     -webkit-background-clip: text;
     //background-clip: text;
-    color: transparent;
+    -webkit-text-fill-color: transparent;
+    //color: transparent;
     font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
     @include mq() {
       width: 532px;

@@ -60,7 +60,7 @@ a {
     background-repeat: no-repeat;
     background-position: center bottom;
     -webkit-background-clip: text;
-    color: transparent;
+    -webkit-text-fill-color: transparent;
     font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif; }
     @media screen and (min-width: 768px) {
       .contents__logoBlock {
