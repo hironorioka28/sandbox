@@ -48,7 +48,7 @@
       position: center bottom;
     }
     -webkit-background-clip: text;
-    background-clip: text;
+    //background-clip: text;
     color: transparent;
     font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
     @include mq() {

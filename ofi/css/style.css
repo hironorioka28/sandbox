@@ -10,7 +10,7 @@ a {
   text-decoration: none; }
 
 .page {
-  background-image: url(../img/bg.png);
+  background-image: url(../img/bg.jpg);
   background-size: cover;
   background-position: center top; }
   .page__contents {
@@ -60,7 +60,6 @@ a {
     background-repeat: no-repeat;
     background-position: center bottom;
     -webkit-background-clip: text;
-    background-clip: text;
     color: transparent;
     font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif; }
     @media screen and (min-width: 768px) {
