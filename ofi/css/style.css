@@ -60,7 +60,8 @@ a {
     background-repeat: no-repeat;
     background-position: center bottom;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
     font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif; }
     @media screen and (min-width: 768px) {
       .contents__logoBlock {
@@ -193,7 +194,7 @@ a {
   .aboutTable__head, .aboutTable__data {
     padding: 8px 0; }
   .aboutTable__head {
-    width: 56px;
+    width: 64px;
     font-size: 1rem;
     text-align: left;
     vertical-align: top;
