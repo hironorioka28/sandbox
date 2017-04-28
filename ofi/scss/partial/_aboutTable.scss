@@ -7,12 +7,14 @@
     padding: 8px 0;
   }
   &__head {
+    padding-top: 10px;
     width: 64px;
     font-size: 1rem;
     text-align: left;
     vertical-align: top;
     line-height: 1.6;
     &--sub {
+      padding-top: 8px;
       width: 40px;
       @include mq() {
         width: 48px;
