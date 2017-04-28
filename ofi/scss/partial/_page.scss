@@ -1,8 +1,18 @@
 .page {
-  background: {
-    image: url(../img/bg.jpg);
-    size: cover;
-    position: center top;
+  &__main {
+    &::before {
+      content: "";
+      display: block;
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      background: {
+        image: url(../img/bg.jpg);
+        repeat: no-repeat;
+        size: cover;
+        position: center top;
+      }
+    }
   }
   &__contents {
     display: flex;

@@ -38,36 +38,15 @@
   }
   &__logoBlock {
     margin-bottom: 8px;
-    display: flex;
-    justify-content: space-between;
-    width: 300px;
-    background: {
-      image: url(../img/texture.jpg);
-      size: cover;
-      repeat: no-repeat;
-      position: center bottom;
-    }
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    width: 280px;
     @include mq() {
-      width: 532px;
+      width: 500px;
       margin-bottom: 20px;
     }
   }
-  &__logoChar,
   &__title {
     display: block;
     line-height: 1;
-  }
-  &__logoChar {
-    font-size: 8rem;
-    @include mq() {
-      font-size: 14rem;
-    }
-  }
-  &__title {
     font-size: 1.2rem;
     text-align: center;
     letter-spacing: 1rem;

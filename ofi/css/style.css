@@ -9,14 +9,21 @@ body {
 a {
   text-decoration: none; }
 
-.page {
+.page__main::before {
+  content: "";
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
   background-image: url(../img/bg.jpg);
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: center top; }
-  .page__contents {
-    display: flex;
-    justify-content: center;
-    position: relative; }
+
+.page__contents {
+  display: flex;
+  justify-content: center;
+  position: relative; }
 
 .contents {
   padding: 40px 20px 8px;
@@ -52,30 +59,14 @@ a {
         margin-bottom: 40px; } }
   .contents__logoBlock {
     margin-bottom: 8px;
-    display: flex;
-    justify-content: space-between;
-    width: 300px;
-    background-image: url(../img/texture.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center bottom;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif; }
+    width: 280px; }
     @media screen and (min-width: 768px) {
       .contents__logoBlock {
-        width: 532px;
+        width: 500px;
         margin-bottom: 20px; } }
-  .contents__logoChar, .contents__title {
-    display: block;
-    line-height: 1; }
-  .contents__logoChar {
-    font-size: 8rem; }
-    @media screen and (min-width: 768px) {
-      .contents__logoChar {
-        font-size: 14rem; } }
   .contents__title {
+    display: block;
+    line-height: 1;
     font-size: 1.2rem;
     text-align: center;
     letter-spacing: 1rem; }
