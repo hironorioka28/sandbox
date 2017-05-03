@@ -35,8 +35,16 @@ $(function() {
 });
 
 $(function() {
+  $(window).on("load", function() {
+    $("#video").css({
+      "opacity": 1
+    });
+  });
+
   var $video = $("#video").get(0);
   var time = 50;
 
   $video.currentTime = time * Math.random();
 });
+
+
