@@ -17,7 +17,6 @@ $(function() {
   if ($("#js-toggleHeader").length) {
     var navListPosBottom = $("#js-navList").offset().top + $("#js-navList").height();
     var windowTop = $(window).scrollTop();
-    console.log(windowTop);
 
     if (windowTop > navListPosBottom) {
       $("#js-toggleHeader").addClass("show");
@@ -33,4 +32,11 @@ $(function() {
       }
     });
   }
+});
+
+$(function() {
+  var $video = $("#video").get(0);
+  var time = 50;
+
+  $video.currentTime = time * Math.random();
 });
