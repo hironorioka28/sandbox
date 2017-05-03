@@ -1,8 +1,8 @@
 .navList {
   list-style: none;
   display: flex;
+  justify-content: space-between;
   &__item {
-    margin-right: 40px;
     &:last-child {
       margin-right: 0;
     }

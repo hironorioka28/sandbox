@@ -4,20 +4,18 @@
   align-items: center;
   outline: none;
   &--disabled {
-    opacity: .4;
+    opacity: .6;
     pointer-events: none;
   }
   &__text {
-    color: $ofi_yellow;
-    font-size: 1.2rem;
-    @include mq() {
-      font-size: 1.8rem;
+    color: $white-l;
+    font: {
+      size: 1.6rem;
+      weight: 600;
     }
-  }
-  &__svg {
-    width: 32px;
+    letter-spacing: .1rem;
     @include mq() {
-      width: 48px;
+      font-size: 2rem;
     }
   }
 }

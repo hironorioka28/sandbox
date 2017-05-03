@@ -1,0 +1,7 @@
+.js-toggleHeader {
+  transition: all .5s ease;
+  transform: translateY(-100%);
+  &.show {
+    transform: translateY(0);
+  }
+}

@@ -1,12 +1,13 @@
 .about {
   width: 100%;
-  padding: 20px 12px;
+  padding: 120px 12px;
   color: $white-l;
   @include mq() {
+    padding-top: 80px;
     width: 80%;
   }
   @include mq(pc) {
-    width: 1024px;
+    width: 1048px;
   }
   &__title {
     margin-bottom: 20px;

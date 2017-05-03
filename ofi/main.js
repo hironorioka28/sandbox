@@ -1,12 +1,36 @@
 var $ = require("jquery");
 
 $(function(){
-   $('a[href^="#"]').click(function() {
-      var speed = 1000;
-      var href= $(this).attr("href");
-      var target = $(href == "#" || href == "" ? 'html' : href);
-      var position = target.offset().top;
-      $('body,html').animate({scrollTop:position}, speed, 'swing');
-      return false;
-   });
+  $('a[href^="#"]').click(function() {
+     var speed = 1000;
+     var href= $(this).attr("href");
+     var target = $(href == "#" || href == "" ? 'html' : href);
+     var position = target.offset().top;
+     $('body,html').animate({scrollTop:position}, speed, 'swing');
+     return false;
+  });
+
+
+});
+
+$(function() {
+  if ($("#js-toggleHeader").length) {
+    var navListPosBottom = $("#js-navList").offset().top + $("#js-navList").height();
+    var windowTop = $(window).scrollTop();
+    console.log(windowTop);
+
+    if (windowTop > navListPosBottom) {
+      $("#js-toggleHeader").addClass("show");
+    }
+
+    $(window).scroll(function() {
+      var wScrollTop = $(window).scrollTop();
+
+      if (wScrollTop > navListPosBottom) {
+        $("#js-toggleHeader").addClass("show");
+      } else {
+        $("#js-toggleHeader").removeClass("show");
+      }
+    });
+  }
 });

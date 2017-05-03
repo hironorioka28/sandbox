@@ -1,0 +1,32 @@
+.header {
+  padding: 12px 20px 40px;;
+  background: linear-gradient(rgba($black-d, .8) 50%, transparent 100%);
+  @include mq(pc) {
+    display: flex;
+    justify-content: center;
+  }
+  &__flexWrapper {
+    @include mq() {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    @include mq(pc) {
+      width: 1048px;
+    }
+  }
+  &__logo {
+    margin-bottom: 20px;
+    display: block;
+    color: $white-l;
+    font: {
+      size: 1.6rem;
+      weight: 300;
+    }
+    letter-spacing: .3rem;
+    @include mq() {
+      font-size: 2rem;
+      margin-bottom: 0;
+    }
+  }
+}

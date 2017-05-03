@@ -1,47 +1,65 @@
 .contents {
-  padding: 40px 20px 8px;
+  padding: 160px 20px 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
+  color: $white-l;
+  &--top {
+    padding-top: 40px;
+  }
   @include mq() {
-    padding: 40px 0 8px;
+    padding: 120px 0 8px;
     width: 600px;
   }
   &__name {
-    margin-bottom: 12px;
+    margin-bottom: 32px;
     font: {
       size: 1.2rem;
       weight: 200;
     }
-    letter-spacing: .8rem;
-    color: $ofi_yellow;
+    letter-spacing: .76rem;
+    text-indent: .8rem;
     text-align: center;
     @include mq() {
-      margin-bottom: 20px;
+      margin-bottom: 40px;
       font-size: 1.8rem;
       letter-spacing: 1.56rem;
+      text-indent: 1.6rem;
     }
   }
   &__mainLogo {
-    margin-bottom: 16px;
+    margin-bottom: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
     font: {
       weight: 300;
     }
-    color: $ofi_yellow;
     @include mq() {
-      margin-bottom: 40px;
+      margin-bottom: 200px;
     }
   }
   &__logoBlock {
-    margin-bottom: 8px;
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: space-between;
     width: 280px;
     @include mq() {
+      margin-bottom: 40px;
       width: 500px;
-      margin-bottom: 20px;
+    }
+  }
+  &__logoChar {
+    display: block;
+    font: {
+      family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", sans-serif;
+      size: 8rem;
+      weight: 400;
+    }
+    line-height: 1;
+    @include mq() {
+      font-size: 15rem;
     }
   }
   &__title {
@@ -55,13 +73,8 @@
     letter-spacing: 2rem;
     }
   }
-  &__info {
-    margin-bottom: 60px;
-    font-style: normal;
-  }
   &__text {
     margin-bottom: 4px;
-    color: $ofi_yellow;
     text-align: center;
     &:last-child {
       margin-bottom: 0;
@@ -89,7 +102,13 @@
     }
   }
   &__descWrapper {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     width: 100%;
+  }
+  &__nav {
+    width: 100%;
+    @include mq() {
+      width: 500px;
+    }
   }
 }

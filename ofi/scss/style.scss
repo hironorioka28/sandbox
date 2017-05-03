@@ -5,6 +5,8 @@
 @import "partial/mixins";
 
 @import "partial/page";
+@import "partial/header";
+@import "partial/globalNavList";
 @import "partial/contents";
 
 @import "partial/navList";
@@ -18,4 +20,4 @@
 
 @import "partial/footer";
 
-@import "partial/svg-instagram";
+@import "partial/js-toggleHeader";

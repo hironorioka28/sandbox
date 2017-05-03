@@ -1,22 +1,42 @@
 .page {
+  &__header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
   &__main {
-    &::before {
-      content: "";
-      display: block;
-      width: 100vw;
-      height: 100vh;
-      position: fixed;
-      background: {
-        image: url(../img/bg.jpg);
-        repeat: no-repeat;
-        size: cover;
-        position: center top;
-      }
-    }
   }
   &__contents {
     display: flex;
     justify-content: center;
     position: relative;
+    &--top {
+      height: 100vh;
+      align-items: center;
+    }
+  }
+  &__video {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: {
+        image: url(../img/bg2.png);
+        repeat: no-repeat;
+        size: cover;
+        position: center top;
+      }
+    }
   }
 }
