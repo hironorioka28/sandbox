@@ -358,3 +358,9 @@ a {
   transform: translateY(-100%); }
   .js-toggleHeader.show {
     transform: translateY(0); }
+
+.js-videoWrapper {
+  transition: all .5s ease;
+  opacity: 0; }
+  .js-videoWrapper.show {
+    opacity: 1; }

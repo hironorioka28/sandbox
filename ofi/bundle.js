@@ -82,6 +82,7 @@
 
 	$(function() {
 	  $(window).on("load", function() {
+	    $(".js-videoWrapper").addClass("show");
 	    $("#video").css({
 	      "opacity": 1
 	    });
