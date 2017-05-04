@@ -25,8 +25,8 @@ function onYouTubeIframeAPIReady() {
       "start": startTime
     },
     events: {
-      "onReady": onPlayerReady,
-      "onStateChange": onPlayerStateChange
+      "onReady": onPlayerReady//,
+      //"onStateChange": onPlayerStateChange
     }
   });
 }
@@ -41,17 +41,18 @@ function onPlayerReady(event) {
   console.log("youtube is ready");
 
   p.playVideo();
+  document.getElementById("js-youtube").classList.add("show");
 
 }
 
-function onPlayerStateChange(event) {
-  var status = event.data;
-  console.log(status);
-
-  if (status == 3) {
-    document.getElementById("js-youtube").classList.add("show");
-  }
-}
+//function onPlayerStateChange(event) {
+//  var status = event.data;
+//  console.log(status);
+//
+//  if (status == 3) {
+//    document.getElementById("js-youtube").classList.add("show");
+//  }
+//}
 
 $(function() {
   $("#js-ytPlay").on("click", function() {
