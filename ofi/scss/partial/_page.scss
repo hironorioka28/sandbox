@@ -13,9 +13,19 @@
     display: flex;
     justify-content: center;
     position: relative;
+    background-color: rgba($black-d, .6);
+    &:last-of-type {
+      padding-bottom: 60px;
+      background: linear-gradient(rgba($black-d, .6) 90%, transparent 100%);
+    }
     &--top {
       height: 100vh;
       align-items: center;
+      background: none;
+    }
+    &--detailTop {
+      padding-top: 80px;
+      background: linear-gradient(transparent 0, rgba($black-d, .6) 10%);
     }
   }
   &__video {

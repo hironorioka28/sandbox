@@ -3,6 +3,7 @@
   height: 80px;
   display: flex;
   justify-content: center;
+  background: linear-gradient(transparent, rgba($black-d, .6));
   &__copy {
     font-size: 1.2rem;
     color: $white-l;

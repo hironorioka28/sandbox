@@ -1,5 +1,5 @@
 .contents {
-  padding: 100px 20px 8px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,7 +9,7 @@
     padding-top: 40px;
   }
   @include mq() {
-    padding: 72px 0 8px;
+    padding: 20px 0;
     width: 600px;
   }
   &__name {
@@ -65,12 +65,15 @@
   &__title {
     display: block;
     line-height: 1;
-    font-size: 1.2rem;
     text-align: center;
     letter-spacing: 1rem;
+    font: {
+      size: 1.6rem;
+      weight: 600;
+    }
     @include mq() {
-      font-size: 1.6rem;
-    letter-spacing: 2rem;
+      font-size: 2rem;
+      letter-spacing: 2rem;
     }
   }
   &__text {
@@ -104,6 +107,9 @@
   &__descWrapper {
     margin-bottom: 40px;
     width: 100%;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
   &__nav {
     width: 100%;
