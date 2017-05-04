@@ -87,6 +87,10 @@
 	    //  "opacity": 1
 	    //});
 	  });
+	    $(".js-videoWrapper").addClass("show");
+	    $("#video").css({
+	      "opacity": 1
+	    });
 
 	  var $video = $("#video").get(0);
 	  var time = 320;
