@@ -8,6 +8,7 @@ var player;
 var vid = "RXdD1KBx1Lw";
 var maxTime = 320,
     startTime = Math.ceil((Math.random() * maxTime));
+console.log(startTime);
 
 function onYouTubeIframeAPIReady() {
   player = new YT.Player("js-youtube", {
@@ -37,12 +38,15 @@ function onPlayerReady(event) {
 
   playerReady = true;
 
+  console.log("youtube is ready");
+
   p.playVideo();
 
 }
 
 function onPlayerStateChange(event) {
   var status = event.data;
+  console.log(status);
 
   if (status == 1) {
     document.getElementById("js-youtube").classList.add("show");
