@@ -8,6 +8,7 @@ var player;
 var vid = "RXdD1KBx1Lw";
 var maxTime = 320,
     startTime = Math.ceil((Math.random() * maxTime));
+console.log(startTime);
 
 function onYouTubeIframeAPIReady() {
   player = new YT.Player("js-youtube", {
@@ -24,14 +25,16 @@ function onYouTubeIframeAPIReady() {
       "start": startTime
     },
     events: {
-      "onReady": onPlayerReady
+      "onReady": onPlayerReady,
+      "onStateChange": onPlayerStateChange
     }
   });
 }
 
 var playerReady = false;
-function onPlayerReady(e) {
-  const p = e.target;
+
+function onPlayerReady(event) {
+  const p = event.target;
 
   playerReady = true;
 
@@ -40,7 +43,18 @@ function onPlayerReady(e) {
   p.mute();
   p.playVideo();
 
-  document.getElementById("js-youtube").classList.add("show");
+}
+
+function onPlayerStateChange(event) {
+  var status = event.data;
+  console.log(status);
+
+  if (status == 1) {
+    document.getElementById("js-youtube").classList.add("show");
+  }
+  if (status == 3) {
+    document.getElementById("js-youtube").classList.remove("show");
+  }
 }
 
 $(function() {
