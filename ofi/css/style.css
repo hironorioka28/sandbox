@@ -325,7 +325,8 @@ a {
       margin-bottom: 0; }
   .aboutTable__labelText {
     display: inline-block;
-    width: 120px; }
+    width: 120px;
+    vertical-align: top; }
     @media screen and (min-width: 768px) {
       .aboutTable__labelText {
         width: 144px; } }

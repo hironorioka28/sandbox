@@ -46,6 +46,7 @@
   &__labelText {
     display: inline-block;
     width: 120px;
+    vertical-align: top;
     @include mq() {
       width: 144px;
     }
