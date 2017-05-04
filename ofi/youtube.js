@@ -8,7 +8,6 @@ var player;
 var vid = "RXdD1KBx1Lw";
 var maxTime = 320,
     startTime = Math.ceil((Math.random() * maxTime));
-console.log(startTime);
 
 function onYouTubeIframeAPIReady() {
   player = new YT.Player("js-youtube", {
@@ -38,8 +37,6 @@ function onPlayerReady(event) {
 
   playerReady = true;
 
-  console.log("youtube is ready");
-
   p.mute();
   p.playVideo();
 
@@ -47,12 +44,11 @@ function onPlayerReady(event) {
 
 function onPlayerStateChange(event) {
   var status = event.data;
-  console.log(status);
 
-  if (status == 3) {
+  if (status == 1) {
     document.getElementById("js-youtube").classList.add("show");
   }
-  if (status == 0) {
+  if (status == 3) {
     document.getElementById("js-youtube").classList.remove("show");
   }
 }
