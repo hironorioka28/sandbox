@@ -1,5 +1,6 @@
 .globalNavList {
   display: flex;
+  list-style-type: none;
   &__item {
     margin-right: 20px;
     &:last-child {

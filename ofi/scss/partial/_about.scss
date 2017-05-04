@@ -1,9 +1,9 @@
 .about {
   width: 100%;
-  padding: 120px 12px;
+  padding: 100px 12px 12px;
   color: $white-l;
   @include mq() {
-    padding-top: 80px;
+    padding-top: 72px;
     width: 80%;
   }
   @include mq(pc) {

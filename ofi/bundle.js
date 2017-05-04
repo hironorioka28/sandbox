@@ -89,7 +89,7 @@
 	  });
 
 	  var $video = $("#video").get(0);
-	  var time = 50;
+	  var time = 320;
 
 	  $video.currentTime = time * Math.random();
 	});

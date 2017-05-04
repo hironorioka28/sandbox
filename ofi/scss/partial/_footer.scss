@@ -1,8 +1,14 @@
 .footer {
-  height: 100px;
-  &__button {
-    padding-top: 20px;
-    display: flex;
-    justify-content: center;
+  padding: 20px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  &__copy {
+    font-size: 1.2rem;
+    color: $white-l;
+    width: 100%;
+    @include mq() {
+      width: 1048px;
+    }
   }
 }
