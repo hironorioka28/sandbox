@@ -9,8 +9,6 @@ var vid = "RXdD1KBx1Lw";
 var maxTime = 320,
     startTime = Math.ceil((Math.random() * maxTime));
 
-console.log(startTime);
-
 function onYouTubeIframeAPIReady() {
   player = new YT.Player("js-youtube", {
     videoId: vid,
@@ -21,6 +19,7 @@ function onYouTubeIframeAPIReady() {
       "controls": 0,
       "rel": 0,
       "loop": 1,
+      "playlist": vid,
       "playsinline": 1,
       "start": startTime
     },
@@ -36,8 +35,12 @@ function onPlayerReady(e) {
 
   playerReady = true;
 
+  console.log("youtube is ready");
+
   p.mute();
   p.playVideo();
+
+  document.getElementById("js-youtube").classList.add("show");
 }
 
 $(function() {
@@ -52,6 +55,9 @@ $(function() {
         "opacity": 1,
         "pointer-events": "all"
       });
+      $("#js-youtube").css({
+        "opacity": 1
+      });
     }
   });
   $('#js-ytPause').click(function() {
@@ -64,6 +70,9 @@ $(function() {
       $("#js-ytPlay").css({
         "opacity": 1,
         "pointer-events": "all"
+      });
+      $("#js-youtube").css({
+        "opacity": .5
       });
     }
   });
