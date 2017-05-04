@@ -82,25 +82,16 @@
 
 	$(function() {
 	  $(window).on("load", function() {
-	    $(".js-videoWrapper").addClass("show");
-	    $("#video").css({
-	      "opacity": 1
-	    });
+	    //$(".js-videoWrapper").addClass("show");
+	    //$("#video").css({
+	    //  "opacity": 1
+	    //});
 	  });
 
 	  var $video = $("#video").get(0);
 	  var time = 320;
-	  var agent = navigator.userAgent.toLocaleLowerCase();
 
-	  if (agent.search(/iphone/) != -1) {
-	    function trackTo(evt) {
-	        evt.target.currentTime = time * Math.random();
-	        evt.target.removeEventListener("loadeddata", trackTo);
-	    };
-	    $video.addEventListener("loadeddata", trackTo);
-	  } else {
-	    $video.currentTime = time * Math.random();
-	  }
+	  $video.currentTime = time * Math.random();
 	});
 
 
