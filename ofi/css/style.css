@@ -316,6 +316,7 @@ a {
       .aboutTable__text {
         font-size: 1.4rem; } }
     .aboutTable__text--sub {
+      display: flex;
       font-size: 1rem;
       margin-bottom: 2px; }
       @media screen and (min-width: 768px) {
@@ -324,9 +325,13 @@ a {
     .aboutTable__text:last-child {
       margin-bottom: 0; }
   .aboutTable__labelText {
-    display: inline-block;
+    display: block;
     width: 120px;
+    flex-shrink: 0;
     vertical-align: top; }
+    .aboutTable__labelText:last-child {
+      width: auto;
+      flex-shrink: 1; }
     @media screen and (min-width: 768px) {
       .aboutTable__labelText {
         width: 144px; } }
@@ -338,6 +343,11 @@ a {
   .aboutTable__link {
     color: #fff;
     font-weight: 600; }
+  .aboutTable__mobileBreak {
+    display: block; }
+    @media screen and (min-width: 768px) {
+      .aboutTable__mobileBreak {
+        display: none; } }
 
 @media screen and (min-width: 1048px) {
   .member {

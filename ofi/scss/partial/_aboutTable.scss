@@ -33,6 +33,7 @@
       font-size: 1.4rem;
     }
     &--sub {
+      display: flex;
       font-size: 1rem;
       margin-bottom: 2px;
       @include mq() {
@@ -44,9 +45,14 @@
     }
   }
   &__labelText {
-    display: inline-block;
+    display: block;
     width: 120px;
+    flex-shrink: 0;
     vertical-align: top;
+    &:last-child {
+      width: auto;
+      flex-shrink: 1;
+    }
     @include mq() {
       width: 144px;
     }
@@ -61,5 +67,11 @@
   &__link {
     color: $white-l;
     font-weight: 600;
+  }
+  &__mobileBreak {
+    display: block;
+    @include mq() {
+      display: none;
+    }
   }
 }
