@@ -408,7 +408,7 @@ a {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  transition: all .5s ease;
+  transition: all 1s ease;
   opacity: 0; }
   .js-youtube.show {
     opacity: 1; }

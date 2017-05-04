@@ -24,23 +24,32 @@ function onYouTubeIframeAPIReady() {
       "start": startTime
     },
     events: {
-      "onReady": onPlayerReady
+      "onReady": onPlayerReady,
+      "onStateChange": onPlayerStateChange
     }
   });
 }
 
 var playerReady = false;
-function onPlayerReady(e) {
-  const p = e.target;
+
+function onPlayerReady(event) {
+  const p = event.target;
 
   playerReady = true;
 
-  console.log("youtube is ready");
-
-  p.mute();
   p.playVideo();
 
-  document.getElementById("js-youtube").classList.add("show");
+}
+
+function onPlayerStateChange(event) {
+  var status = event.data;
+
+  if (status == 1) {
+    document.getElementById("js-youtube").classList.add("show");
+  }
+  if (status == 3) {
+    document.getElementById("js-youtube").classList.remove("show");
+  }
 }
 
 $(function() {
