@@ -6,12 +6,12 @@
 
 @import "partial/page";
 @import "partial/header";
+@import "partial/videoController";
 @import "partial/globalNavList";
 @import "partial/contents";
 
 @import "partial/navList";
 @import "partial/navButton";
-@import "partial/video";
 @import "partial/mainDesc";
 
 @import "partial/about";
@@ -21,4 +21,4 @@
 @import "partial/footer";
 
 @import "partial/js-toggleHeader";
-@import "partial/js-videoWrapper";
+@import "partial/js-youtube";

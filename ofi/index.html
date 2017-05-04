@@ -29,9 +29,15 @@
         </div><!-- /.header__flexWrapper -->
       </div>
     </header>
+    <div class="page__videoController">
+      <div class="videoController">
+        <button class="videoController__button videoController__button--play js-ytPlay" id="js-ytPlay" type="button" style="color:white">再生</button>
+        <button class="videoController__button videoController__button--pause js-ytPause" id="js-ytPause" type="button" style="color:white">一時停止</button>
+      </div>
+    </div>
     <main class="page__main">
-      <div class="page__video js-videoWrapper">
-        <video id="video" class="video" src="img/100MB_OKAFUJISEKI_0503.mp4" autoplay loop playsinline muted></video>
+      <div class="page__video">
+        <div class="js-youtube" id="js-youtube"></div>
       </div><!-- /.page__video -->
       <section class="page__contents page__contents--top">
         <div class="contents contents--top">
@@ -126,6 +132,8 @@
         <p class="footer__copy">&copy;OKAFUJIISI architects</p>
       </div>
     </footer>
-    <script src="bundle.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+    <script src="youtube.js"></script>
   </body>
 </html>

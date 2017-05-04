@@ -1,0 +1,70 @@
+var script = document.createElement("script");
+script.src = "https://www.youtube.com/iframe_api";
+
+var firstScript = document.getElementsByTagName("script")[0];
+firstScript.parentNode.insertBefore(script, firstScript);
+
+var player;
+var vid = "RXdD1KBx1Lw";
+var maxTime = 320,
+    startTime = Math.ceil((Math.random() * maxTime));
+
+console.log(startTime);
+
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("js-youtube", {
+    videoId: vid,
+    playerVars: {
+      "autoplay": 1,
+      "showinfo": 0,
+      "autohide": 1,
+      "controls": 0,
+      "rel": 0,
+      "loop": 1,
+      "playsinline": 1,
+      "start": startTime
+    },
+    events: {
+      "onReady": onPlayerReady
+    }
+  });
+}
+
+var playerReady = false;
+function onPlayerReady(e) {
+  const p = e.target;
+
+  playerReady = true;
+
+  p.mute();
+  p.playVideo();
+}
+
+$(function() {
+  $("#js-ytPlay").on("click", function() {
+    if(playerReady) {
+      player.playVideo();
+      $(this).css({
+        "opacity": 0,
+        "pointer-events": "none"
+      });
+      $("#js-ytPause").css({
+        "opacity": 1,
+        "pointer-events": "all"
+      });
+    }
+  });
+  $('#js-ytPause').click(function() {
+    if(playerReady) {
+      player.pauseVideo();
+      $(this).css({
+        "opacity": 0,
+        "pointer-events": "none"
+      });
+      $("#js-ytPlay").css({
+        "opacity": 1,
+        "pointer-events": "all"
+      });
+    }
+  });
+});

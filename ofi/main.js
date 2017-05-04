@@ -1,6 +1,4 @@
-var $ = require("jquery");
-
-$(function(){
+(function($) {
   $('a[href^="#"]').click(function() {
      var speed = 1000;
      var href= $(this).attr("href");
@@ -10,10 +8,6 @@ $(function(){
      return false;
   });
 
-
-});
-
-$(function() {
   if ($("#js-toggleHeader").length) {
     var navListPosBottom = $("#js-navList").offset().top + $("#js-navList").height();
     var windowTop = $(window).scrollTop();
@@ -32,20 +26,21 @@ $(function() {
       }
     });
   }
-});
 
-$(function() {
-  $(window).on("load", function() {
-    $(".js-videoWrapper").addClass("show");
-    $("#video").css({
-      "opacity": 1
-    });
+  resizeYoutube();
+  $(window).resize(function() {
+    resizeYoutube();
   });
 
-  var $video = $("#video").get(0);
-  var time = 320;
-
-  $video.currentTime = time * Math.random();
-});
-
-
+  function resizeYoutube() {
+    var wWidth = $(window).width(),
+        wHeight = $(window).height() + 48,
+        baseRatio = 16 / 9,
+        targetRatio = wWidth / wHeight;
+    if (targetRatio < baseRatio) {
+      $("#js-youtube").width(wHeight / 9 * 16).height(wHeight);
+    } else {
+      $("#js-youtube").width(wWidth).height(wWidth / 16 * 9);
+    }
+  }
+})(jQuery);
