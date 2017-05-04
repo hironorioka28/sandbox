@@ -47,10 +47,13 @@ $(function() {
   var agent = navigator.userAgent.toLocaleLowerCase();
 
   if (agent.search(/iphone/) != -1) {
-    alert("iPhone");
+    function trackTo(evt) {
+        evt.target.currentTime = time * Math.random();
+        evt.target.removeEventListener("loadeddata", trackTo);
+    };
+    $video.addEventListener("loadeddata", trackTo);
   } else {
     $video.currentTime = time * Math.random();
-    alert("not iPhone");
   }
 });
 
