@@ -49,10 +49,10 @@ function onPlayerStateChange(event) {
   var status = event.data;
   console.log(status);
 
-  if (status == 1) {
+  if (status == 3) {
     document.getElementById("js-youtube").classList.add("show");
   }
-  if (status == 3) {
+  if (status == 0) {
     document.getElementById("js-youtube").classList.remove("show");
   }
 }
