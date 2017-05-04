@@ -90,8 +90,14 @@
 
 	  var $video = $("#video").get(0);
 	  var time = 320;
+	  var agent = navigator.userAgent.toLocaleLowerCase();
 
-	  $video.currentTime = time * Math.random();
+	  if (agent.search(/iphone/) != -1) {
+	    alert("iPhone");
+	  } else {
+	    $video.currentTime = time * Math.random();
+	    alert("not iPhone");
+	  }
 	});
 
 
