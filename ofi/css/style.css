@@ -1,8 +1,9 @@
+@charset "UTF-8";
 html {
   font-size: 62.5%; }
 
 body {
-  font-family: Garamond, "Hiragino Mincho ProN", Meiryo, serif;
+  font-family: Garamond, "Hiragino Mincho ProN", YuMincho, "HGP明朝B", serif;
   font-weight: 200;
   color: #333; }
 
@@ -47,8 +48,12 @@ a {
 .header {
   padding: 4px 20px 32px;
   background: linear-gradient(rgba(0, 0, 0, 0.6) 50%, transparent 100%); }
+  @media screen and (min-width: 768px) {
+    .header {
+      padding-right: 40px; } }
   @media screen and (min-width: 1048px) {
     .header {
+      padding-right: 20px;
       display: flex;
       justify-content: center; } }
   @media screen and (min-width: 768px) {
@@ -174,7 +179,7 @@ a {
         width: 500px; } }
   .contents__logoChar {
     display: block;
-    font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", sans-serif;
+    font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", YuGothic, sans-serif;
     font-size: 8rem;
     font-weight: 400;
     line-height: 1; }
